@@ -21,21 +21,25 @@ Komunikacja między kontrolerem a pojazdem odbywa się bezprzewodowo z użyciem 
 
 ## Struktura projektu
 
-Repozytorium jest podzielone na następujące foldery:
-    RemoteCarSTM32/
-    ├── Controller/   # kod STM32 dla kontrolera (joystick + nadajnik WiFi)
-    │   ├── Core/Inc, Core/Src ...   # źródła i pliki nagłówkowe mikrokontrolera
-    │   ├── Drivers/                 # biblioteki HAL dla STM32F3xx
-    │   ├── ... (pliki konfiguracyjne projektu STM32CubeIDE, np. .ioc, .project)
-    ├── Vehicle/     # kod STM32 dla pojazdu (odbiornik WiFi i sterowanie silnikami)
-    │   └── (na razie pusty - brak zaimplementowanego kodu w tej wersji)
-    ├── esp32/       # kod modułów ESP (Arduino IDE, dwa szkice .ino)
-    │   ├── wifi_ESP01.ino   # kod dla modułu ESP8266 (odbiornik ESP-NOW na pojeździe)
-    │   └── wifi_ESP32.ino   # kod dla modułu ESP32 (nadawca ESP-NOW w kontrolerze)
-    ├── docs/        # dokumentacja projektu
-    │   └── Krawiec_Marcin_Krasnowski_Tymotwusz_WSYW_Sprawozdanie.pdf   # raport z projektu
-    ├── README.md    # opis projektu, instrukcje
-    └── .gitignore   # plik ignorujący pliki tymczasowe/kompilacji w repozytorium
+```
+RemoteCarSTM32/
+├── Controller/       # kod STM32 dla kontrolera (joystick + nadajnik WiFi)
+│   ├── Core/         # źródła i nagłówki mikrokontrolera
+│   ├── Drivers/      # biblioteki HAL dla STM32F3xx
+│   ├── testADC.ioc   # konfiguracja CubeMX
+│   └── .project/...  # pliki projektu STM32CubeIDE
+├── Vehicle/          # kod STM32 dla pojazdu (odbiornik WiFi + silniki)
+│   └── (pełna struktura projektu, gotowa do edycji)
+├── esp32/            # kod ESP (Arduino IDE, dwa szkice .ino)
+│   ├── wifi_ESP01.ino   # ESP8266 – odbiornik
+│   └── wifi_ESP32.ino   # ESP32 – nadajnik
+├── docs/             # dokumentacja projektu
+│   └── Raport.pdf
+├── README.md
+└── .gitignore
+```
+
+
 
 ## Instrukcja uruchomienia
 
