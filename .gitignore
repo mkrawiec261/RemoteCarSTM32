@@ -1,0 +1,6 @@
+*.bin
+*.elf
+Debug/
+Release/
+.DS_Store
+__MACOSX/
